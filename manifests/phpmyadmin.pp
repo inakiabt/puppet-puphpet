@@ -22,9 +22,7 @@ class puphpet::phpmyadmin(
   }
 
   if ! defined(Package[$phpMyAdmin_package]) {
-    package { $phpMyAdmin_package:
-      require => Class[$dbms]
-    }
+    package { $phpMyAdmin_package }
   }
 
   if ! defined(File[$webroot_location]) {
