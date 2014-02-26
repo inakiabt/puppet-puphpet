@@ -23,6 +23,7 @@ class puphpet::phpmyadmin(
 
   if ! defined(Package[$phpMyAdmin_package]) {
     package { $phpMyAdmin_package:
+      ensure  => installed,
     }
   }
 
